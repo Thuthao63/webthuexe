@@ -1,0 +1,617 @@
+/* Common styles */
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+/* Header styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 50px;
+    height: 80px;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+    background: rgba(255, 255, 255, 0.3);
+}
+
+header.sticky {
+    background: rgba(255, 255, 255, 1);
+}
+
+header:hover {
+    background: rgba(255, 255, 255, 1);
+}
+
+.logo {
+    flex: 1;
+    margin-left: 80px;
+    padding-top: 10px;
+}
+
+/* Menu styles */
+.menu {
+    flex: 3;
+    display: flex;
+}
+
+.menu > li {
+    padding: 0 12px;
+    position: relative;
+}
+
+.doi-mau {
+    color: black;
+    transition: color 0.3s;
+}
+
+.doi-mau:hover {
+    color: red;
+}
+
+/* Submenu styles */
+.menu > li:hover .sub-menu {
+    visibility: visible;
+    top: 30px;
+}
+
+.sub-menu {
+    border-radius: 20px;
+    display: flex;
+    position: absolute;
+    border: 2px solid #ccc;
+    padding: 20px;
+    background: #ffffff;
+    visibility: hidden;
+    top: 55px;
+    transition: 0.3s;
+    z-index: 100;
+    width: 800px;
+    max-width: 1000px;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* Submenu category styles */
+.cat-sub-menu {
+    display: flex;
+    gap: 20px;
+}
+
+.cat-sub-menu > .item-list-submenu {
+    flex: 1;
+    min-width: 150px;
+    display: flex;
+    flex-direction: column;
+}
+
+.item-list-submenu h3 {
+    font-size: 16px;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.item-list-submenu ul {
+    padding-left: 0;
+    margin-top: 10px;
+}
+
+.item-list-submenu ul li {
+    margin-bottom: 8px;
+}
+
+.item-list-submenu ul li a {
+    font-size: 14px;
+    line-height: 16px;
+    color: #57585A;
+    display: block;
+}
+
+/* Menu item styles */
+.menu li a {
+    font-size: 15px;
+    font-weight: bold;
+    display: block;
+    line-height: 20px;
+}
+
+/* Other elements */
+.d-flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.others{
+    flex: 1.5;
+    display: flex;
+}
+.others > li {
+    padding: 0 12px;
+    position: relative;
+}
+.others > li::after {
+    content: "";
+    display: block;
+    width: 1px;
+    height: 50%;
+    background: #dddddd;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.others > li:last-child::after {
+    display: none;
+}
+.others > li:first-child {
+    position: relative;
+}
+.others > li:first-child input {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #333;
+    background: transparent;
+    outline: none;
+}
+.others > li:first-child i {
+    position: absolute;
+    right: 10px;
+}
+
+#slider {
+    overflow: hidden;
+}
+
+.aspect-ratio-169 {
+    display: block;
+    position: relative;
+    padding-top: 56.25%;
+    transition: 0.5s;   /*chuyển động slide mượt mà*/
+}
+
+.aspect-ratio-169 img {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 92%;
+    top: 0;
+    left: 0;
+}
+
+/*nút chuyển ảnh*/
+.not-container {
+    position: absolute;
+    height: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    top: 760px;
+}
+/*nền nút*/
+.not {
+    height: 16px;
+    width: 16px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    margin-right: 12px;
+}
+/*Màu nút*/
+.not.active {
+    background-color: aqua;
+}
+
+/* quảng cáo */
+.home-trending {
+    position: relative;
+    min-height: auto;
+    width: 700px;
+    margin: 50px auto;
+}
+.bg-before_02.bg-before:before {
+    border-radius: 80px 0px 80px 0px;
+    right: -10px;
+    height: 98%;
+}
+
+.bg-before:before {
+    content: "";
+    border: 1px solid #D1D2D4;
+    box-sizing: border-box;
+    border-radius: 24px 0px;
+    padding: 13px 24px;
+    position: absolute;
+    content: "";
+    bottom: 0;
+    right: -5px;
+    z-index: -1;
+    width: 100%;
+    height: 93%;
+}
+.img-trending-desktop img {
+    border-top-left-radius: 80px;
+    border-bottom-right-radius: 80px;
+}
+
+img {
+    border: none;
+    max-width: 100%;
+    height: auto;
+}
+img {
+    vertical-align: middle;
+}
+
+img {
+    overflow-clip-margin: content-box;
+    overflow: clip;
+}
+
+/* footer */
+footer {
+    text-align: center;
+}
+.footer-top {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    height: 70px;
+}
+.footer-top img {
+    margin-left: 25px;
+    height: 150px;
+}
+.footer-top li{
+    padding: 0 12px;
+    position: relative;
+}
+.footer-top li::after {
+    content: "";
+    display: block;
+    width: 1px;
+    height: 30%;
+    background: #cccccc;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.footer-top li:last-child::after {
+    display: none;
+}
+.footer-top li:last-child a {
+    margin-right: 12px;
+    color: #333;
+}
+.footer-center {
+    text-align: center;
+}
+.footer-bottom {
+    margin: 20px 0;
+    text-align: center;
+}
+/* title xe */
+.title-xe {
+    text-align: center;
+    margin-bottom: 24px;
+}
+.title-xe h3 {
+    margin-top: 20px;
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 46px;
+    color: #D73831;
+    text-align: center;
+    letter-spacing: 2px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 10px;
+    font-family: 'Montserrat';
+}
+
+/* css thanh toán (Thảo) */
+
+
+
+/* Căn giữa container thanh toán */
+.checkout-container {
+    display: flex;
+    width: 100%; 
+    background: #FFFAFA;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Container cho hình ảnh */
+.checkout-container {
+	margin-top: 70px;
+}
+
+.image-containerr {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+	border: 1px solid #C0C0C0;
+	width: 600px;
+}
+.image-containerr img{
+	width: 80%;
+    height: auto;
+}
+	
+.image-containerr img.zoom-image {
+	width: 59%;
+    transition: transform 0.1s ease;
+    margin-bottom: 20px; 
+}
+
+/*Ảnh qr */
+#bank_transfer_info {
+    display: none; 
+    margin-top: 20px; 
+}
+
+.discount-note {
+    font-size: 0.9em;
+    color: #FF0000;
+    margin-top: 5px;
+}
+
+/* Định dạng chi tiết thanh toán */
+.payment-details {
+	width: 800px;
+    background-color: #f9f9f9;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.payment-details h2 {
+    text-align: center;
+    color: #186a21;
+}
+
+/* Định dạng datetime-container */
+.datetime-container {
+    display: flex;
+    gap: 20px;
+}
+
+.datetime-container > div {
+    flex: 1;
+}
+
+/* Định dạng price-driver-container */
+.price-driver-container {
+    display: flex;
+    gap: 20px;
+}
+
+.price-driver-container > div {
+    flex: 1;
+}
+
+/* CSS cho tài xê */
+.price-driver-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Khoảng cách giữa các phần tử */
+	margin-bottom: 10px;
+}
+
+.driver-option-container {
+    display: flex;
+    flex-direction: column;
+    gap: 5px; /* Khoảng cách giữa các tùy chọn */
+}
+
+.driver-options {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Khoảng cách giữa checkbox và nhãn */
+}
+
+.driver-options div {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Khoảng cách giữa checkbox và nhãn bên trong mỗi tùy chọn */
+}
+
+.payment-details form input[type="datetime-local"],
+.payment-details form input[type="text"],
+.payment-details form select,
+.payment-details form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Định dạng cho các trường nhập chỉ để đọc */
+.payment-details form input[readonly] {
+    background: #e9e9e9;
+}
+
+/* Định dạng nút bấm */
+.button-group {
+    display: flex;
+    justify-content: center; 
+	align-items: center;
+    gap: 10px; 
+    flex-wrap: wrap; 
+    width: 100%; 
+	
+}
+.button-group input {
+	padding: 10px 20px;
+	font-size: 16px;
+	background-color: #4CAF50;
+	color: white;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+
+/* Cài đặt responsive */
+@media (max-width: 767px) {
+    .checkout-container {
+        flex-direction: column;
+        padding: 20px; 
+    }
+}
+
+@media (min-width: 1200px) {
+    .checkout-container {
+        padding: 60px; 
+    }
+    .image-container {
+        margin-right: 40px; 
+    }
+}
+
+/* Định dạng cho container của ô checkbox và label */
+.accept-terms {
+    display: flex;
+    align-items: center; 
+}
+
+/* Tùy chọn: Định dạng thêm cho input và label */
+.accept-terms input[type="checkbox"] {
+    margin: 0;
+}
+
+.accept-terms label {
+    margin: 8px;
+    color: #555;
+}
+
+/* phần phương thức */
+#bank_transfer_info {
+    display: flex;
+    margin-top: 30px;
+}
+
+.bank-transfer-left {
+    flex: 1;
+    text-align: center;
+}
+
+.bank-transfer-right {
+    flex: 2;
+    padding-left: 50px;
+}
+
+.bank-transfer-right p {
+    margin: 5px 0;
+}
+.show-account {
+    max-height: 0; /* Ẩn nội dung bằng cách đặt chiều cao tối đa bằng 0 */
+    overflow: hidden; /* Ẩn nội dung tràn */
+    position: absolute; /* Để nội dung hiển thị phía trên các phần tử khác */
+    background-color: rgb(237, 237, 237); /* Bạn có thể thay đổi màu nền */
+    padding: 0 10px; /* Thêm khoảng đệm ngang, bỏ đệm dọc để tránh lỗi khi trượt */
+    transition: max-height 0.3s ease-out, padding 0.3s ease-out; /* Thêm hiệu ứng chuyển động */
+    z-index: 1000; /* Đảm bảo nội dung hiển thị phía trên */
+    width: 220px;
+    top: auto;
+    height: 1000px;
+    left: 110%;
+    transform: translateX(-50%);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+  
+/* Hiển thị show-account khi hover vào thẻ a */
+a.doi-mau.user-icon:hover + .show-account,
+.show-account:hover {
+    max-height: 320px; /* Đặt giá trị lớn hơn chiều cao tối đa của nội dung thực tế */
+    padding: 10px; /* Thêm đệm khi hover để nội dung không bị cắt */
+}
+
+
+.hello-message {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    font-weight: bold; /* Điều chỉnh độ đậm */
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5); /* Thêm hiệu ứng viền chữ */
+    transition: text-shadow 0.3s ease-in-out; /* Hiệu ứng khi di chuột vào */
+}
+
+.hello-message:hover {
+    text-shadow: 4px 4px 6px rgba(0,0,0,0.7); /* Hiệu ứng viền chữ khi di chuột vào */
+}
+
+.image-container {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 150px; /* Kích thước cố định của khung ảnh */
+    height: 150px;
+    overflow: hidden; /* Ẩn bất kỳ phần nào của ảnh vượt ra ngoài khung */
+}
+
+.image-container img {
+    width: 100%; /* Ảnh sẽ điều chỉnh kích thước để vừa với khung */
+    height: auto;
+    display: block; /* Đảm bảo ảnh không bị trôi trong container */
+}
+.shopping-window {
+    position: fixed;
+    top: 10%;
+    right: 0;
+    transform: translateY(-50%);
+    width: 400px; /* Độ rộng của cửa sổ */
+    height: 200vh; /* Chiều cao của cửa sổ */
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-out; /* Hiệu ứng khi hiển thị */
+    transform: translateX(100%);
+    z-index: 9999;
+}
+
+.shopping-window.active {
+    transform: translateX(0);
+}
+.close-icon {
+    position: absolute;
+    font-size: 30px; /* Kích thước mặc định */
+    transition: font-size 0.2s ease; /* Hiệu ứng chuyển đổi */
+    right: 10px;
+    margin-top: 5px;
+}
+
+.close-icon:hover {
+    font-size: 28px; /* Kích thước khi hover */
+}
+.gap {
+	margin-top: 50px;
+}
+.search_row {
+	display: flex;
+}
